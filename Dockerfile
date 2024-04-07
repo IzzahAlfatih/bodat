@@ -24,6 +24,6 @@ ENV JUPYTER_PORT=8888
 
 ENV JUPYTER_PASSWORD=""
 
-COPY bodat/ /workspace/
+COPY code/ /workspace/
 
 CMD ["/bin/bash", "-c", "HASHED_PASSWORD=$(python3 -c \"from jupyter_server.auth import passwd; print(passwd('$JUPYTER_PASSWORD'))\"); echo \"c.NotebookApp.password = u'$HASHED_PASSWORD'\" >> ~/.jupyter/jupyter_notebook_config.py && SHELL=/bin/bash jupyter lab --no-browser --ip=0.0.0.0 --allow-root --notebook-dir=/workspace/"]
