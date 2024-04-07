@@ -70,6 +70,7 @@ def build_dataset(is_train, config):
         root = os.path.join(config.DATA.DATA_PATH, prefix)
         dataset = datasets.ImageFolder(root, transform=transform)
         nb_classes = 10
+        #nb_classes = 1000 # Original for ImageNet-1K
     else:
         raise NotImplementedError("We only support ImageNet Now.")
 
