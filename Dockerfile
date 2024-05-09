@@ -10,7 +10,7 @@ RUN apt-get install python3-venv -y
 
 RUN pip3 install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
 
-RUN pip3 install numpy==1.20.3 timm==0.5.4 einops==0.6.1 PyYAML yacs termcolor
+RUN pip3 install numpy==1.20.3 timm==0.5.4 einops==0.6.1 PyYAML yacs termcolor thop
 
 RUN pip3 install natten==0.14.6+torch1110cu113 -f https://shi-labs.com/natten/wheels
 
